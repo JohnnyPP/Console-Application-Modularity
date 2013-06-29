@@ -6,13 +6,11 @@ using System.Threading.Tasks;
 
 namespace Modularity
 {
-    class Program
+    public class InputParserService
     {
-        static void Main(string[] args)
+        public CommandTypes ParseCommand(string command)
         {
-            CalculatorReplLoop loop = new CalculatorReplLoop();
-            loop.Run();
+            return ((CommandTypes)Enum.Parse(typeof(CommandTypes), command));
         }
-
     }
 }
